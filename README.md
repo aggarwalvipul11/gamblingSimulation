@@ -1,1 +1,1 @@
-# Welcome to the world of Gamblingcd gamblingSimulation/!
+# Welcome to the world of Gambling!!!
