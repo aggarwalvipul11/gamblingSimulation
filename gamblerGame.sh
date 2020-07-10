@@ -10,14 +10,11 @@ betMoneyPerGame=1;
 # Added variables for adding a limit for minimum money loose and maximum money wins.
 maxMoneyWinPerDay=150;
 minMoneyLoosePerDay=50;
-
-# 
 moneyEarns=$((stakeMoneyPerDay));
 
-# Apply if condition and find if Gamble wins or loose.
+# Apply while condition and checks the condition connects or not
 while [[ $moneyEarns -le $maxMoneyWinPerDay && $moneyEarns -ge $minMoneyLoosePerDay ]]
-do 
-	
+do
 	gameResult=$(($RANDOM%2));
 
 	# Apply if condition and if Gamble wins or loose.
