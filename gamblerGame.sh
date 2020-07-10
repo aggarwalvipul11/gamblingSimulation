@@ -1,22 +1,34 @@
 #!/bin/bash -x
 
+# Welcome Message
 echo "Welcome to the world of Gambling."
-
+ 
 # Assign variables and add values(Money).
 stakeMoneyPerDay=100;
 betMoneyPerGame=1;
 
-# Assign another variable and inside use RANDOM to generate numbers between 0 and 1.
-gameResult=$(($RANDOM%2))
+# Added variables for adding a limit for minimum money loose and maximum money wins.
+maxMoneyWinPerDay=150;
+minMoneyLoosePerDay=50;
+
+# 
+moneyEarns=$((stakeMoneyPerDay));
 
 # Apply if condition and find if Gamble wins or loose.
-if [[ $gameResult -eq 1 ]]
-then
-	echo "Gambler Win"
-	moneyEarns=$(($stakeMoneyPerDay+1))
-else
-	echo "Gambler loose"
-	moneyEarns=$(($stakeMoneyPerDay-1))
-fi
+while [[ $moneyEarns -le $maxMoneyWinPerDay && $moneyEarns -ge $minMoneyLoosePerDay ]]
+do 
+	
+	gameResult=$(($RANDOM%2));
 
-#End of Use Case 02
+	# Apply if condition and if Gamble wins or loose.
+	if [[ $gameResult -eq 1 ]]
+	then
+		echo "Gambler Win"
+		((moneyEarns++));
+	else
+		echo "Gambler loose"
+		((moneyEarns--));
+	fi
+done
+
+#End of Use Case 03
