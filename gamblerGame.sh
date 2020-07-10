@@ -2,10 +2,16 @@
 
 echo "Welcome to the world of Gambling."
 
-#Assign variables for Use Case 1
+stakeMoneyPerDay=100;
+betMoneyPerGame=1;
 
-stakeMoneyPerDay = 100;
-betMoneyPerGame = 1;
+gameResult=$(($RANDOM%2))
 
-#End of Use Case 01
-
+if [[ $gameResult -eq 1 ]]
+then
+	echo "Gambler Win"
+	moneyEarns=$(($stakeMoneyPerDay+1))
+else
+	echo "Gambler loose"
+	moneyEarns=$(($stakeMoneyPerDay-1))
+fi
