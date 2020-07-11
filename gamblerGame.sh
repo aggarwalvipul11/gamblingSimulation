@@ -19,4 +19,4 @@ else
 	moneyEarns=$(($stakeMoneyPerDay-1))
 fi
 
-#End of Use Case 02
+#End of Use Case02
