@@ -15,7 +15,7 @@ then
 	echo "Gambler Win"
 	moneyEarns=$(($stakeMoneyPerDay+1))
 else
-	echo "Gambler loose"
+	echo "Gambler lost"
 	moneyEarns=$(($stakeMoneyPerDay-1))
 fi
 
