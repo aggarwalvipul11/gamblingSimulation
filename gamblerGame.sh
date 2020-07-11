@@ -48,3 +48,5 @@ then
 else
 	echo "Gambler has Neither Won Nor Lost."
 fi
+
+#End of UseCase04
