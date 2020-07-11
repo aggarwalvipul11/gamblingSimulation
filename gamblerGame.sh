@@ -9,7 +9,7 @@ betMoneyPerGame=1;
 # Assign another variable and inside use RANDOM to generate numbers between 0 and 1.
 gameResult=$(($RANDOM%2))
 
-# Apply if condition and find if Gamble wins or loose.
+# Apply if condition and find if Gamble wins or lost.
 if [[ $gameResult -eq 1 ]]
 then
 	echo "Gambler Win"
